@@ -4,7 +4,8 @@ import { TEST_IDS } from '../constants'
 import { loader } from '../assets'
 
 type ErrorMessage = {
-  message: string
+  message?: string
+  error?: string
 }
 
 type Error = {
@@ -33,7 +34,7 @@ export const TextSummary: React.FC = () => {
           Oops! Something went wrong...
           <br />
           <span className='font-satoshi font-normal text-gray-700'>
-            {(error as Error)?.data?.message}
+            {(error as Error)?.data?.message ?? (error as Error)?.data?.error}
           </span>
         </p>
       )
