@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig",
+  "exclude": ["./src/components/__tests__/**", "./src/react-testing-utils/**"]
+}
